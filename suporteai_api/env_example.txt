@@ -1,0 +1,11 @@
+# Configurações da API GLPI
+# Renomeie este arquivo para .env e configure os valores corretos
+
+# URL base da API REST do GLPI (deve terminar com /apirest.php)
+GLPI_URL=https://seudominio.com/apirest.php
+
+# Token do App (gerado no GLPI em Configuração > Geral > API > App Tokens)
+GLPI_APP_TOKEN=sua_chave_do_app
+
+# Token do Usuário (gerado no GLPI em Configuração > Geral > API > User Tokens)
+GLPI_USER_TOKEN=seu_token_de_usuario 

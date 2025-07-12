@@ -1,0 +1,76 @@
+{
+  "exemplos_payload": [
+    {
+      "nome": "João Silva",
+      "telefone": "(11) 99999-9999",
+      "empresa": "Empresa ABC Ltda",
+      "setor": "TI",
+      "descricao": "Não consigo acessar o sistema de email. Aparece erro de conexão."
+    },
+    {
+      "nome": "Maria Santos",
+      "telefone": "(21) 88888-8888",
+      "empresa": "Tech Solutions",
+      "setor": "Recursos Humanos",
+      "descricao": "Preciso de ajuda para configurar a impressora da sala de reuniões."
+    },
+    {
+      "nome": "Pedro Oliveira",
+      "telefone": "(31) 77777-7777",
+      "empresa": "Consultoria XYZ",
+      "setor": "Financeiro",
+      "descricao": "O sistema de contabilidade está muito lento e às vezes trava completamente."
+    },
+    {
+      "nome": "Ana Costa",
+      "telefone": "(41) 66666-6666",
+      "empresa": "Startup Inovação",
+      "setor": "Marketing",
+      "descricao": "Não consigo fazer login no sistema de CRM. A senha não está sendo aceita."
+    },
+    {
+      "nome": "Carlos Ferreira",
+      "telefone": "(51) 55555-5555",
+      "empresa": "Indústria Metalúrgica",
+      "setor": "Produção",
+      "descricao": "O computador da linha de produção não está conectando com o servidor principal."
+    }
+  ],
+  "instrucoes_postman": {
+    "metodo": "POST",
+    "url": "http://localhost:8000/abrir_chamado",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "Use um dos exemplos acima no campo Body (raw JSON)",
+    "resposta_esperada": {
+      "success": true,
+      "message": "Chamado criado com sucesso!",
+      "chamado_id": 12345,
+      "dados_enviados": {
+        "nome": "João Silva",
+        "telefone": "(11) 99999-9999",
+        "empresa": "Empresa ABC Ltda",
+        "setor": "TI",
+        "descricao": "Não consigo acessar o sistema de email. Aparece erro de conexão."
+      },
+      "resposta_glpi": {
+        "id": 12345,
+        "message": "Chamado criado com sucesso",
+        "dados": {
+          "nome": "João Silva",
+          "telefone": "(11) 99999-9999",
+          "empresa": "Empresa ABC Ltda",
+          "setor": "TI",
+          "descricao": "Não consigo acessar o sistema de email. Aparece erro de conexão."
+        }
+      }
+    }
+  },
+  "endpoints_disponiveis": {
+    "GET /": "Verifica se a API está funcionando",
+    "POST /abrir_chamado": "Cria um novo chamado no GLPI",
+    "GET /health": "Verifica a saúde da aplicação",
+    "GET /docs": "Documentação Swagger da API"
+  }
+} 
